@@ -15,7 +15,7 @@ local function AwardBadgeOnTouch(hit)
             return BadgeService:UserHasBadgeAsync(player.UserId, badgeID)
         end)
         if not success then
-            warn("Failed to check badge for player " .. player.Name .. ": " .. tostring(hasBadgeOrError))
+            warn("Failed to check badge for player, " .. player.Name .. ": " .. tostring(hasBadgeOrError) .. " this is most likely because either roblox is down or the badge ID is invalid")
             return
         end
 
@@ -31,7 +31,7 @@ local function AwardBadgeOnTouch(hit)
         if not awardSuccess then
             warn("Failed to award badge to " .. player.Name .. ": " .. tostring(awardError))
         else
-            print("Awarded badge to " .. player.Name)
+            print("Awarded badge to " .. player.Name .. " successfully.")
         end
     end
 end
