@@ -14,3 +14,5 @@ if not awesome then
     print("Something went wrong and died! Guardsman is now running in headless mode. Debug information: ", ErrorHandle)
     result = ErrorHandle
 end
+
+-- in conclusion, when in doubt, local function death()
