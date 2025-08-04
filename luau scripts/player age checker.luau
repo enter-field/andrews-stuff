@@ -9,11 +9,7 @@ else
 	print("User is <13.")
 end
 
-if PolicyStatus then -- extra debug check, feel free to remove if unwanted
-	print("PolicyStatus returned with a true value for the target user.")
-else
-	print("PolicyStatus returned with a false value for the target player.")
-end
+print("PolicyStatus returned with:" .. tostring(PolicyStatus) .. " for user: " .. PolicyInfo.UserId .. ".")
 
 --[[
 some extra info regarding the variables
